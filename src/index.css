@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --color-surface-0: #0b0e14;
+  --color-surface-1: #11151d;
+  --color-surface-2: #161b26;
+  --color-surface-3: #1d2330;
+  --color-border-subtle: #262d3d;
+
+  --color-accent: #3b82f6;
+  --color-accent-soft: #1d2a4a;
+  --color-bull: #22c55e;
+  --color-bull-soft: #10291c;
+  --color-bear: #ef4444;
+  --color-bear-soft: #2d1414;
+  --color-warn: #f59e0b;
+  --color-warn-soft: #2b2112;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface-0);
+  color: #e5e7eb;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Lightweight light-theme override; dark remains the primary, polished theme. */
+html.light {
+  color-scheme: light;
+}
+
+html.light body {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+html.light {
+  --color-surface-0: #f3f4f6;
+  --color-surface-1: #ffffff;
+  --color-surface-2: #f3f4f6;
+  --color-surface-3: #e5e7eb;
+  --color-border-subtle: #e2e4e9;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2e3444 transparent;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2e3444;
+  border-radius: 8px;
+}
